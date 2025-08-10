@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Wildlife India: Explore National Parks</title>
+   <!-- Google Fonts: Inter -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <!-- Header Section -->
+   <header>
+      <div class="container">
+         <h1>Wildlife India: Explore National Parks</h1>
+         <p>Discover the rich biodiversity of India's protected areas.</p>
+      </div>
+   </header>
+
+   <!-- Main Content -->
+   <main class="container">
+
+      <!-- Filters Section -->
+      <div class="filters-section">
+         <div>
+            <label for="search-input">Search by Name</label>
+            <input type="text" id="search-input" placeholder="e.g., Ranthambore">
+         </div>
+         <div>
+            <label for="state-filter">Filter by State</label>
+            <select id="state-filter">
+               <option value="all">All States</option>
+            </select>
+         </div>
+         <div>
+            <label for="type-filter">Filter by Type</label>
+            <select id="type-filter">
+               <option value="all">All Types</option>
+            </select>
+         </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden">
+         <h2>No Parks Found</h2>
+         <p>Try adjusting your search or filter criteria.</p>
+      </div>
+
+      <!-- Parks Grid -->
+      <div id="parks-grid">
+         <!-- Park cards will be injected here by JavaScript -->
+      </div>
+
+   </main>
+
+   <!-- Footer Section -->
+   <footer>
+      <div class="container">
+         <p>&copy; 2025 Wildlife India Portal. All rights reserved.</p>
+         <p class="footer-text">Created to promote awareness about India's natural heritage.</p>
+      </div>
+   </footer>
+
+   <!-- JavaScript Logic -->
+   <script src="data.js"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>
