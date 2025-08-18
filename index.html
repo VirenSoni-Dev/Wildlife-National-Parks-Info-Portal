@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="bg-tp">
+        <div class="logo">
+            <h1 class="logo-txt">
+                <i data-lucide="trees"></i>
+                Wildlife India
+            </h1>
+        </div>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li class="nav-links">Home</li>
+                    <li class="nav-links">About</li>
+                    <li class="nav-links">Explore</li>
+                    <li class="nav-links">Contact</li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="util-btn">
+            <div class="theme-btn">
+                <button onclick="toggleDarkMode()"><i id="themeIcon" data-lucide="sun"></i></button>
+            </div>
+            <div class="login-btn">
+                <a href="#">LogIn</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Guardians of the Wild: Discover India's Natural Sanctuaries</h1>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
