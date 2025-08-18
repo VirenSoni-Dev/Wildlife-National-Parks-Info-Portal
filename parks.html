@@ -9,7 +9,8 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+   <script src="https://unpkg.com/lucide@latest"></script>
+   <link rel="stylesheet" href="css/explore.css">
 </head>
 
 <body>
@@ -17,7 +18,10 @@
    <!-- Header Section -->
    <header>
       <div class="container">
-         <h1>Wildlife India: Explore National Parks</h1>
+         <h1>
+            <i data-lucide="trees"></i>
+            Wildlife India: Explore National Parks
+         </h1>
          <p>Discover the rich biodiversity of India's protected areas.</p>
       </div>
    </header>
@@ -27,18 +31,27 @@
 
       <!-- Filters Section -->
       <div class="filters-section">
-         <div>
-            <label for="search-input">Search by Name</label>
+         <div class="filter-item">
+            <label for="search-input">
+               <i data-lucide="search"></i>
+               Search by Name
+            </label>
             <input type="text" id="search-input" placeholder="e.g., Ranthambore">
          </div>
-         <div>
-            <label for="state-filter">Filter by State</label>
+         <div class="filter-item">
+            <label for="state-filter">
+               <i data-lucide="map-pin"></i>
+               Filter by State
+            </label>
             <select id="state-filter">
                <option value="all">All States</option>
             </select>
          </div>
-         <div>
-            <label for="type-filter">Filter by Type</label>
+         <div class="filter-item">
+            <label for="type-filter">
+               <i data-lucide="tag"></i>
+               Filter by Type
+            </label>
             <select id="type-filter">
                <option value="all">All Types</option>
             </select>
@@ -47,8 +60,11 @@
 
       <!-- No Results Message -->
       <div id="no-results" class="hidden">
-         <h2>No Parks Found</h2>
-         <p>Try adjusting your search or filter criteria.</p>
+         <i data-lucide="frown" class="lucide" style="width: 48px; height: 48px; color: #a0aec0;"></i>
+         <div>
+            <h2>No Parks Found</h2>
+            <p>Try adjusting your search or filter criteria.</p>
+         </div>
       </div>
 
       <!-- Parks Grid -->
@@ -67,8 +83,12 @@
    </footer>
 
    <!-- JavaScript Logic -->
-   <script src="data.js"></script>
-   <script src="script.js"></script>
+   <script src="js/script.js"></script>
+
+   <!-- Activate Lucide Icons -->
+   <script>
+      lucide.createIcons();
+   </script>
 </body>
 
 </html>

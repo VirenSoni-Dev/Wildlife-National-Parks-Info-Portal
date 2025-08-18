@@ -6,16 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
    const typeFilter = document.getElementById('type-filter');
    const noResultsDiv = document.getElementById('no-results');
 
-   /**
-    * Renders the park cards to the DOM based on a provided array of park objects.
-    * @param {Array} parks - The array of park objects to display.
-    */
+   let parksData = [];
+
+   async function initializeApp() {
+      try {
+         const response = await fetch("data/parks.json");
+         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+         parksData = await response.json();
+         populateFilters();
+         renderParks(parksData);
+         addEventListeners();
+      }
+      catch(error) {
+         console.error('Could not fetch parks data:', error);
+         parksGrid.innerHTML = `<p style="text-align: center; color: red;">Error loading park data. Please try again later.</p>`;
+      }
+   }
+
    function renderParks(parks) {
       parksGrid.innerHTML = ''; // Clear existing cards
       if (parks.length === 0) {
          noResultsDiv.classList.remove('hidden');
       } else {
          noResultsDiv.classList.add('hidden');
+         console.log('hello')
       }
       parks.forEach(park => {
          const cardHTML = `
@@ -75,12 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
    // --- INITIALIZATION ---
 
-   // Add event listeners to all filter controls
-   searchInput.addEventListener('input', filterAndRender);
-   stateFilter.addEventListener('change', filterAndRender);
-   typeFilter.addEventListener('change', filterAndRender);
+   function addEventListeners() {
+      // Add event listeners to all filter controls
+      searchInput.addEventListener('input', filterAndRender);
+      stateFilter.addEventListener('change', filterAndRender);
+      typeFilter.addEventListener('change', filterAndRender);
+   }
 
    // Initial setup
-   populateFilters();
-   renderParks(parksData);
+   initializeApp();
 });
