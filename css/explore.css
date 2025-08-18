@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
    --bg-color: #f3f9f1;
    --fg-color: #2c3e50;
@@ -8,6 +10,10 @@
    --font-main: 'Segoe UI', sans-serif;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    font-family: 'Inter', sans-serif;
    background-color: #f0f4f8;
@@ -16,24 +22,6 @@ body {
    line-height: 1.6;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-   width: 8px;
-}
-
-::-webkit-scrollbar-track {
-   background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-   background: #888;
-   border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-   background: #555;
 }
 
 /* Container for centering content */

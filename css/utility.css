@@ -1,0 +1,13 @@
+.bg-tp {
+   background: transparent;
+}
+
+.bg-lt-green {
+   background-color: lightgreen;
+}
+
+.bg-blur {
+   background-color: #ffffff49;
+   backdrop-filter: blur(13px);
+   -webkit-backdrop-filter: blur(13px);
+}

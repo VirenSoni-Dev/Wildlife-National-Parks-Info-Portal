@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+   --bg-color: #FFFFFF;
+   --fg-color: #2C3E50;
+   --accent-color: #27AE60;
+   --accent-text: #276749;
+   --accent-bg: #C6F6D5;
+   --primary-text: #1A202C;
+   --secondary-text: #4A5568;
+   --white: #FFFFFF;
+   /* --card-bg: #FFFFFF; */
+   --border-color: #DCDCDC;
+   --hover-bg: #EAF4EA;
+   --font-main: 'Inter', sans-serif;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 10px;
+   scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #888;
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}
+
+body {
+   font-family: var(--font-main);
+   font-size: 1.6rem;
+   background-image: linear-gradient(135deg, rgba(22, 59, 42, 0.7), rgba(67, 88, 70, 0.6), rgba(212, 163, 115, 0.5));
+   background-size: cover;
+   background-position: center;
+}
+
+header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: 13vh;
+   padding: 0.2rem 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 1000;
+}
+
+.logo {
+   background-color: var(--bg-color);
+   border-radius: 100px;
+   padding: 0.6em 0.9em;
+   display: flex;
+   align-items: center;
+}
+
+.logo-txt {
+   font-size: 2.7rem;
+   color: var(--accent-text);
+}
+
+.nav {
+   padding: .2rem;
+   border: 1px solid var(--border-color);
+   border-radius: 100px;
+}
+
+.nav ul {
+   list-style-type: none;
+   list-style-position: inside;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 4.2rem;
+}
+
+.nav ul li {   
+   padding: .75em .85em;
+}
+
+.nav ul li a {
+   position: relative;
+   color: var(--white);
+   text-decoration: none;
+   font-size: 1.84rem;
+   font-weight: bold;
+}
+
+.nav ul li a::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 3px;
+   border-radius: 100px;
+   /* Adjust this value for the desired offset */
+   bottom: -3px;
+   left: 0;
+   background-color: var(--white);
+   transition: all 0.4s ease-in-out;
+}
+
+.nav ul li a:hover::after {
+   width: 100%;
+}
+
+.nav ul li.current {
+   background-color: var(--bg-color);
+   border-radius: 100px;
+}
+
+.nav ul li.current a {
+   color: var(--accent-text);
+}
+
+.nav ul li.current a::after {
+   background-color: var(--accent-text);
+}
+
+.util-btn {
+   padding-right: .9rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1.4rem;
+}
+
+.util-btn .theme-btn button {
+   background-color: var(--bg-color);
+   width: 4.8rem;
+   aspect-ratio: 1 / 1;
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.util-btn .login-btn a {
+   text-decoration: none;
+   color: var(--white);
+   font-size: 1.8rem;
+   font-weight: bold;
+   border: 3px solid var(--white);
+   border-radius: 100px;
+   padding: .65em 1em;
+}
+
+#hero-section {
+   min-height: 100vh;
+   color: var(--white);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.hero-content {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   gap: 2.4rem;
+}
+
+.hero-content .hero-text h1 {
+   text-align: center;
+   font-size: 7.6rem;
+   font-weight: 900;
+   line-height: 1.1;
+}
+
+.hero-content .hero-text h1 span {
+   background: -webkit-linear-gradient(45deg, #FFD700, #A2E88A, #49D252);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.hero-content .hero-sub-text {
+   text-align: center;
+   color: var(--white);
+   font-size: 2.6rem;
+   line-height: 1.1;
+}
+
+.hero-content .hero-btn {
+   margin-top: 1.9em;
+}
+
+.hero-content .hero-btn a {
+   display: inline-block;
+   text-decoration: none;
+   color: var(--white);
+   background-color: var(--accent-text);
+   font-size: 1.9rem;
+   font-weight: bold;
+   border-radius: 100px;
+   padding: .8em 1.4em;
+   transition: all 0.3s ease-in-out;
+}
+
+.hero-content .hero-btn a:hover {
+   transform: translateY(-4px);
+   background-color: var(--accent-color);
+}
