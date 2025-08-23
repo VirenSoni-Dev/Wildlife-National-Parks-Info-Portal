@@ -9,6 +9,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <script src="https://unpkg.com/lucide@latest"></script>
+   <link rel="stylesheet" href="fonts/stylesheet.css">
    <link rel="stylesheet" href="css/utility.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,51 +18,101 @@
 
    <!-- Header -->
    <header class="bg-tp">
-      <div class="logo">
-         <h1 class="logo-txt">
-            <i data-lucide="trees"></i>
-            Wildlife India
-         </h1>
-      </div>
-
-      <div class="nav bg-blur">
-         <nav>
-            <ul>
-               <li class="nav-links current"><a href="">Home</a></li>
-               <li class="nav-links"><a href="">About</a></li>
-               <li class="nav-links"><a href="explore.html">Explore</a></li>
-               <li class="nav-links"><a href="">Contact</a></li>
-            </ul>
-         </nav>
-      </div>
-
-      <div class="util-btn">
-         <div class="theme-btn">
-            <button onclick="toggleDarkMode()"><i id="themeIcon" data-lucide="sun"></i></button>
+      <div class="container-fullh-fullw-mw1350-wp" aria-hidden="true">
+         <div class="logo">
+            <h1 class="logo-txt">
+               <i data-lucide="trees"></i>
+               Wildlife India
+            </h1>
          </div>
-         <div class="login-btn">
-            <a href="#">LogIn</a>
+         <div class="nav bg-blur">
+            <nav>
+               <ul>
+                  <li class="nav-links current"><a href="">Home</a></li>
+                  <li class="nav-links"><a href="">About</a></li>
+                  <li class="nav-links"><a href="explore.html">Explore</a></li>
+                  <li class="nav-links"><a href="">Contact</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div class="util-btn">
+            <div class="theme-btn">
+               <button onclick="toggleDarkMode()"><i id="themeIcon" data-lucide="sun"></i></button>
+            </div>
+            <div class="login-btn">
+               <a href="#">LogIn</a>
+            </div>
          </div>
       </div>
    </header>
 
    <!-- MAIN -->
-   <!-- Hero Section -->
    <main class="main">
+      <!-- Hero Section -->
       <section id="hero-section">
          <div class="hero-content">
             <div class="hero-text">
                <h1>Guardians of the Wild : Discover <span>India's Natural Sanctuaries</span></h1>
             </div>
             <div class="hero-sub-text">
-               <p>Journey through a land of breathtaking biodiversity, from the royal tigers of the plains to the majestic elephants of the south. Explore the protected havens that safeguard India's priceless natural heritage.</p>
+               <p>Journey through a land of breathtaking biodiversity, from the royal tigers of the plains to the
+                  majestic elephants of the south. Explore the protected havens that safeguard India's priceless
+                  natural heritage.</p>
             </div>
             <div class="hero-btn">
                <a href="explore.html">Explore Parks & Sanctuaries</a>
             </div>
          </div>
       </section>
+
+      <!-- Featured Section -->
+      <section class="content-section featured-section">
+         <div class="container-wp-fullh" aria-hidden="true">
+            <div class="featured-park" id="featuredParkSection">
+               <div class="featured-content">
+                  <span class="tag">Park of the month</span>
+                  <h2>Ranthambore</h2>
+                  <p>A must-visit destination known for its stunning landscapes and diverse wildlife, offering a unique experience for every visitor.</p>
+                  <div class="hero-btn"><a href="explore.html" style="margin-top: 1rem;">Learn More</a></div>
+               </div>
+               <div class="featured-image">
+                  <img src="ranthambore.webp" alt="Featured image of Ranthambore">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Icons Section -->
+      <section class="content-section icons-section">
+         <div class="container-wp-fullh" aria-hidden="true">
+            <h2 class="section-title">Icons of the Wild</h2>
+            <div class="icons-grid">
+               <div class="icon-card">
+                  <img src="images/animals/bengal_tiger.jpeg" alt="Bengal Tiger" class="icon-card-bg">
+                  <div class="icon-card-content">
+                     <h3>Bengal Tiger</h3>
+                     <p>The largest of all Asian big cats, a symbol of power and wilderness.</p>
+                  </div>
+               </div>
+               <div class="icon-card">
+                  <img src="images/animals/asiatic_elephant.jpeg" alt="Asiatic Elephant" class="icon-card-bg">
+                  <div class="icon-card-content">
+                     <h3>Asiatic Elephant</h3>
+                     <p>A social and intelligent giant, crucial to forest ecosystems.</p>
+                  </div>
+               </div>
+               <div class="icon-card">
+                  <img src="images/animals/one-horned_rhino.jpeg" alt="One-Horned Rhino" class="icon-card-bg">
+                  <div class="icon-card-content">
+                     <h3>One-Horned Rhino</h3>
+                     <p>A prehistoric marvel, brought back from the brink by conservation.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
    </main>
+
 
 
    <script>

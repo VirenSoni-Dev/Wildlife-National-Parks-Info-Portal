@@ -11,3 +11,48 @@
    backdrop-filter: blur(13px);
    -webkit-backdrop-filter: blur(13px);
 }
+
+.container-90w {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+.container-fullw {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+.container-wp {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.container-wp-fullh {
+   width: 90%;
+   height: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.container-fullh {
+   width: 90%;
+   height: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+.container-fullh-fullw-mw1350-wp {
+   width: 100%;
+   height: 100%;
+   max-width: 1350px;
+   margin: 0 auto;
+}
