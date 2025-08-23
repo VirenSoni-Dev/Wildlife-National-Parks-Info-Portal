@@ -100,7 +100,7 @@ header .container-fullh-fullw-mw1350-wp {
 
 .nav ul li a {
    position: relative;
-   color: var(--white);
+   color: var(--secondary-text);
    text-decoration: none;
    font-size: 1.84rem;
    font-weight: bold;
@@ -155,10 +155,10 @@ header .container-fullh-fullw-mw1350-wp {
 
 .util-btn .login-btn a {
    text-decoration: none;
-   color: var(--white);
+   color: var(--secondary-text);
    font-size: 1.8rem;
    font-weight: bold;
-   border: 3px solid var(--white);
+   border: 3px solid var(--secondary-text);
    border-radius: 100px;
    padding: .65em 1em;
 }
@@ -187,7 +187,7 @@ header .container-fullh-fullw-mw1350-wp {
 
 .hero-text h1 {
    text-align: center;
-   font-size: 7.6rem;
+   font-size: 7rem;
    font-weight: 900;
    line-height: 1.1;
 }
@@ -202,8 +202,8 @@ header .container-fullh-fullw-mw1350-wp {
 .hero-sub-text {
    text-align: center;
    color: var(--white);
-   font-size: 2.6rem;
-   line-height: 1.1;
+   font-size: 2.15rem;
+   line-height: 1.5;
 }
 
 .hero-btn {
@@ -243,7 +243,7 @@ header .container-fullh-fullw-mw1350-wp {
 /* Featured Section  */
 .featured-section {
    width: 100%;
-   height: 60vh;
+   height: 70vh;
 }
 
 .featured-park {
@@ -268,8 +268,17 @@ header .container-fullh-fullw-mw1350-wp {
    padding: .4rem 1.2rem;
    border-radius: 50px;
    font-weight: 600;
-   display: inline-block;
+   width: fit-content;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 5px;
    margin-bottom: 1.6rem;
+}
+
+.tag .lucide {
+   width: 18px;
+   height: 18px;
 }
 
 .featured-content h2 {
