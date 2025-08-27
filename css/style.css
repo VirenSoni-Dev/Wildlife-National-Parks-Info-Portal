@@ -243,7 +243,7 @@ header .container-fullh-fullw-mw1350-wp {
 /* Featured Section  */
 .featured-section {
    width: 100%;
-   height: 70vh;
+   min-height: 70vh;
 }
 
 .featured-park {
@@ -274,6 +274,9 @@ header .container-fullh-fullw-mw1350-wp {
    align-items: center;
    gap: 5px;
    margin-bottom: 1.6rem;
+   cursor: default;
+   user-select: none;
+   -moz-user-select: none;
 }
 
 .tag .lucide {
@@ -315,7 +318,7 @@ header .container-fullh-fullw-mw1350-wp {
 }
 
 .icon-card:hover {
-   transform: scale(1.05);
+   transform: translateY(-4px);
 }
 
 .icon-card::before {
@@ -353,4 +356,11 @@ header .container-fullh-fullw-mw1350-wp {
    margin: 0;
    font-size: 1.6rem;
    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 1100px) {
+   .featured-park {
+      grid-template-columns: auto;
+   }
 }
